@@ -1,0 +1,12 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.output {
+  background-color: #eee;
+  margin-top: 1em;
+  height: calc(100vh - 5em);
+  overflow-scrolling: touch;
+  overflow: auto;
+}
