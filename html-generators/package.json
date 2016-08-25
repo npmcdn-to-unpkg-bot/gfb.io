@@ -9,7 +9,8 @@
     "build": "gulp default",
     "html": "gulp html-copy",
     "server": "gulp browser-sync",
-    "webpack": "gulp webpack"
+    "webpack": "gulp webpack",
+    "deploy": "gulp --gulpfile gulpfile-prod.babel.js"
   },
   "keywords": [],
   "author": "",
