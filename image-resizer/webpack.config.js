@@ -13,7 +13,7 @@ const extractHTML = new ExtractTextPlugin('/[name].html');
 module.exports = {
   watch: true,
   entry: {
-    'image-resizer': './src/scripts/image-resizer.js',
+    index: './src/scripts/image-resizer.js',
   },
   output: {
     path: distRoot,
