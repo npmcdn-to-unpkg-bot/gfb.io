@@ -1,0 +1,35 @@
+@import 'https://fonts.googleapis.com/css?family=Play';
+
+.global-header {
+    border-top: solid #56528b 4px;
+    //box-shadow: 5px 5px 25px 0 rgba(148,148,148,1);
+    background-color: #fff;
+    font-family: 'Play', sans-serif;
+
+    .logo {
+        text-transform: uppercase;
+    }
+
+    .header-main {
+        //color: #fff;
+        //background-color: #333;
+        color: #666;
+    }
+
+    .menu-list {
+        //background-color: #56528b;
+        border-top: solid 1px #aaa;
+    }
+
+    .menu-list-item {
+        //color: #fff;
+        //border-bottom: solid #56528b;
+        color: #666;
+    }
+
+    .menu-list-item.is-active {
+        background-color: #efefef;
+        //border-bottom: solid #999 3px;
+    }
+
+}

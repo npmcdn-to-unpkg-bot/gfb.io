@@ -1,0 +1,23 @@
+.global-header {
+    border-top: solid #4a007b 3px;
+    box-shadow: 5px 5px 25px 0 rgba(148,148,148,1);
+
+    .header-main {
+        color: #fff;
+        background-color: #333;
+    }
+
+    .menu-list {
+        background-color: #4a007b;
+    }
+
+    .menu-list-item {
+        color: #fff;
+        border-bottom: solid #4a007b;
+    }
+
+    .menu-list-item.is-active {
+        border-bottom: solid #fff 3px;
+    }
+
+}
