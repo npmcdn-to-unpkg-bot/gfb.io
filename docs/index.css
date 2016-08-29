@@ -1,0 +1,59 @@
+:root {
+  box-sizing: border-box;
+}
+
+html,body {
+}
+
+body {
+  padding: 0;
+  margin: 5%;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+  color: #666;
+}
+
+a {
+  color: #666;
+}
+
+.arrow-list {
+}
+
+.arrow-list > * {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.arrow-list > *::before {
+  content: '';
+  height: 0;
+  width: 0;
+  display: block;
+  border: 5px transparent solid;
+  border-right-width: 0;
+  border-left-color: #aaa;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 8px;
+}
+
+.arrow-list > *::after {
+  content: '';
+  height: 2px;
+  width: 10px;
+  display: block;
+  background-color: #aaa;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  left: 0;
+}
+
+
+/*# sourceMappingURL=index.css.map*/
