@@ -1,5 +1,6 @@
 :root {
   box-sizing: border-box;
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
 }
 
 html,body {
@@ -7,13 +8,30 @@ html,body {
 
 body {
   padding: 0;
-  margin: 5%;
-  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+  margin: 0;
   color: #666;
 }
 
 a {
   color: #666;
+}
+
+h1, h2 {
+  font-family: "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "ＭＳ ゴシック", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.content-top {
+  margin: 5%;
 }
 
 .arrow-list {

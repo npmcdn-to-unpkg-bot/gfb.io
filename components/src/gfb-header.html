@@ -1,0 +1,105 @@
+<!-- Material lite -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
+<script defer src="https://code.getmdl.io/1.2.0/material.min.js"></script>
+
+<!-- web fonts -->
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+
+<template>
+  <style>
+    .global-header ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    .global-header li {
+      list-style: none;
+    }
+
+    .global-header .header-main {
+      height: 60px;
+      text-align: left;
+      line-height: 60px;
+      font-size: 1.5rem;
+      padding-left: 30px;
+    }
+
+    .global-header .menu-list {
+      display: table;
+      table-layout: fixed;
+      text-align: center;
+      width: 100%;
+    }
+
+    .global-header .menu-list-item {
+      display: table-cell;
+      vertical-align: middle;
+      padding: 0;
+      height: 45px;
+    }
+
+    .global-header .menu-list-item a {
+      display: block;
+      line-height: 45px;
+      height: 45px;
+      padding: 0;
+    }
+
+
+
+    /* theme */
+
+    .global-header {
+      border-top: solid #56528b 4px;
+      background-color: #fff;
+      font-family: "\6E38\30B4\30B7\30C3\30AF", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "\FF2D\FF33   \30B4\30B7\30C3\30AF", sans-serif;
+    }
+    .global-header .logo {
+      text-transform: uppercase;
+      font-family: 'Play', sans-serif;
+    }
+
+    .global-header .header-main {
+      color: #666;
+
+    }
+    .global-header .menu-list {
+      border-top: solid 1px #aaa;
+
+    }
+    .global-header .menu-list-item {
+      color: #666;
+
+    }
+    .global-header .menu-list-item.is-active {
+      background-color: #efefef;
+    }
+  </style>
+
+  <header class="global-header">
+    <div class="header-main"><span class="logo">gfb</span>.io</div>
+    <nav>
+      <ul class="menu-list">
+        <li class="menu-list-item"><a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Top</a></li>
+        <li class="menu-list-item is-active"><a href="/image-resizer/" class=" mdl-button mdl-js-button mdl-js-ripple-effect">Image Resizer</a></li>
+        <li class="menu-list-item"><a href="/404" class="mdl-button mdl-js-button mdl-js-ripple-effect">Misc</a></li>
+      </ul>
+    </nav>
+  </header>
+</template>
+
+<script>
+  var doc = (document._currentScript || document.currentScript).ownerDocument;
+  var proto = Object.create(HTMLElement.prototype);
+  proto.createdCallback = function() {
+    var t = doc.querySelector('template');
+    var c = doc.importNode(t.content, true);
+    this.appendChild(c);
+
+    Array.from(document.querySelectorAll('.menu-list-item > *')).forEach(function(elm) {
+      componentHandler.upgradeElement(elm);
+    });
+  };
+  document.registerElement('gfb-header', { prototype: proto });
+</script>
