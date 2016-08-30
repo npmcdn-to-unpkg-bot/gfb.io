@@ -9,7 +9,7 @@ import webpackOptions from './webpack-prod.config.babel.js';
 import browserSyncOptions from './bs-config.js';
 
 const paths = {
-  dist: '../docs/html-generators',
+  dist: '../docs/generators',
   src: 'src',
 };
 
