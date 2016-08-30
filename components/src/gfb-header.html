@@ -6,7 +6,7 @@
 <!-- web fonts -->
 <link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
 
-<template>
+<template id="tpl-gfb-header">
   <style>
 		.global-header {
 			overflow: hidden;
@@ -66,6 +66,7 @@
       background-color: #fff;
       font-family: "\6E38\30B4\30B7\30C3\30AF", YuGothic, "Hiragino Kaku Gothic ProN", "Hiragino Kaku Gothic Pro", "\FF2D\FF33   \30B4\30B7\30C3\30AF", sans-serif;
     }
+
     .global-header .logo {
       text-transform: uppercase;
       font-family: 'Play', sans-serif;
@@ -73,16 +74,18 @@
 
     .global-header .header-main {
       color: #666;
-
     }
+
     .global-header .menu-list {
       border-top: solid 1px #aaa;
 
     }
+
     .global-header .menu-list-item {
       color: #666;
 
     }
+
     .global-header .menu-list-item.is-active {
       background-color: #efefef;
     }
@@ -93,24 +96,29 @@
     <nav class="menu-list-container">
       <ul class="menu-list">
         <li class="menu-list-item"><a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Top</a></li>
-        <li class="menu-list-item is-active"><a href="/image-resizer/" class=" mdl-button mdl-js-button mdl-js-ripple-effect">Image Resizer</a></li>
-        <li class="menu-list-item"><a href="/404" class="mdl-button mdl-js-button mdl-js-ripple-effect">Misc</a></li>
+        <li class="menu-list-item"><a href="/image-resizer/" class=" mdl-button mdl-js-button mdl-js-ripple-effect">Image Resizer</a></li>
+        <li class="menu-list-item"><a href="/generators/prefecture" class="mdl-button mdl-js-button mdl-js-ripple-effect">Generators</a></li>
       </ul>
     </nav>
   </header>
 </template>
 
 <script>
-  var doc = (document._currentScript || document.currentScript).ownerDocument;
-  var proto = Object.create(HTMLElement.prototype);
-  proto.createdCallback = function() {
-    var t = doc.querySelector('template');
-    var c = doc.importNode(t.content, true);
-    this.appendChild(c);
+	(function() {
+		var doc = (document._currentScript || document.currentScript).ownerDocument;
+		var proto = Object.create(HTMLElement.prototype);
+		var t = doc.querySelector('#tpl-gfb-header');
+		proto.createdCallback = function() {
+			var c = doc.importNode(t.content, true);
+			this.appendChild(c);
 
-    Array.from(document.querySelectorAll('.menu-list-item > *')).forEach(function(elm) {
-      componentHandler.upgradeElement(elm);
-    });
-  };
-  document.registerElement('gfb-header', { prototype: proto });
+			// is-active class
+			this.querySelectorAll('.menu-list-item')[this.getAttribute('data-current')].classList.add('is-active');
+
+			Array.from(document.querySelectorAll('.menu-list-item > *')).forEach(function(elm) {
+				componentHandler.upgradeElement(elm);
+			});
+		};
+		document.registerElement('gfb-header', { prototype: proto });
+	} ());
 </script>

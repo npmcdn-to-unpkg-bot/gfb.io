@@ -2,23 +2,23 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <title>JS | Playground</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+
+  <title>GFB.io</title>
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="https://code.getmdl.io/1.2.0/material.indigo-pink.min.css">
   <link rel="stylesheet" href="./styles/index.css">
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+
+	<!-- Web Components -->
+	<link rel="import" href="/assets/components/gfb-header.html">
 </head>
 <body>
-  <header class="global-header">
-    <div class="header-main"><span class="logo">gfb</span>.io</div>
-    <nav>
-      <ul class="menu-list">
-        <li class="menu-list-item"><a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Top</a></li>
-        <li class="menu-list-item is-active"><a href="/image-resizer/" class=" mdl-button mdl-js-button mdl-js-ripple-effect">Image Resizer</a></li>
-        <li class="menu-list-item"><a href="/404" class="mdl-button mdl-js-button mdl-js-ripple-effect">Misc</a></li>
-      </ul>
-    </nav>
-  </header>
+
+	<gfb-header data-current="1"></gfb-header>
 
   <main class="main tools-container" role="main">
     <section class="contents content-image-size-calculator">
