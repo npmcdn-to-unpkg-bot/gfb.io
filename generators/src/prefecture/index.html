@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Prefecture Generator</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
 
     <script src="https://code.jquery.com/jquery-3.0.0.min.js"
             integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
@@ -11,13 +12,21 @@
 
 
     <link rel="stylesheet" href="../styles/styles.css">
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcomponentsjs/0.7.22/webcomponents.min.js"></script>
+
+    <!-- Web Components -->
+    <link rel="import" href="/assets/components/gfb-header.html">
 </head>
 <body>
+
+<gfb-header data-current="2"></gfb-header>
 
 <main>
     <div id="app" class="container">
         <div class="row">
-            <form action="" class="col s6">
+            <form action="" class="col s12 m6">
                 <div class="row">
 
                     <p class="col s6">
@@ -49,7 +58,7 @@
                 </div>
                 <div v-show="optionsForHTML">
                     <div class="row">
-                        <p class="col s6">
+                        <p class="col s12">
                             <input v-model="keyAsName" type="checkbox" name="key-name" id="key-name">
                             <label for="key-name">Value = 都道府県名</label>
                         </p>
@@ -58,7 +67,7 @@
 
             </form>
 
-            <div class="col s6 output">
+            <div class="col s12 m6 output">
                 <pre v-text="output"></pre>
             </div>
         </div>
