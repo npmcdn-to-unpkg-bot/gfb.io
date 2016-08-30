@@ -8,6 +8,10 @@
 
 <template>
   <style>
+		.global-header {
+			overflow: hidden;
+		}
+
     .global-header ul {
       padding: 0;
       margin: 0;
@@ -17,13 +21,19 @@
       list-style: none;
     }
 
+		.global-header .menu-list-container {
+			overflow-x: scroll;
+			-webkit-overflow-scrolling: touch;
+		}
+
     .global-header .header-main {
       height: 60px;
       text-align: left;
       line-height: 60px;
       font-size: 1.5rem;
       padding-left: 30px;
-    }
+			min-width: calc(200px * 3);
+		}
 
     .global-header .menu-list {
       display: table;
@@ -37,6 +47,7 @@
       vertical-align: middle;
       padding: 0;
       height: 45px;
+			width: 200px;
     }
 
     .global-header .menu-list-item a {
@@ -79,7 +90,7 @@
 
   <header class="global-header">
     <div class="header-main"><span class="logo">gfb</span>.io</div>
-    <nav>
+    <nav class="menu-list-container">
       <ul class="menu-list">
         <li class="menu-list-item"><a href="/" class="mdl-button mdl-js-button mdl-js-ripple-effect">Top</a></li>
         <li class="menu-list-item is-active"><a href="/image-resizer/" class=" mdl-button mdl-js-button mdl-js-ripple-effect">Image Resizer</a></li>
